@@ -20,6 +20,7 @@
 7. Con el archivo **cargar_digitalizacion_NombreAgencia.bat** se creará una tarea de Windows la cual se ejecutará cada 30 minutos de 7am a 7pm. Esta tarea debe tener el nombre de **CargaDigitalizacionNombreAgencia**.
 
 > [!IMPORTANT]  
-> En caso de usar **SQLAgent**, se solicita crear el/los Job(s) con las mismas caracteríasticas que la/las tarea(s) programada(s) de Windows.
+> En caso de usar **SQLAgent**, se solicita estrictamente crear el/los Job(s) con las mismas caracteríasticas que la/las tarea(s) programada(s) de Windows.
+
 > [!NOTE]  
 > Los archivos que terminan con el sufijo **_historica**, solo se ejecutan si se requiere nuevamente una carga historica en el distribuidor.
