@@ -14,10 +14,10 @@
 
 6. Una vez que todo se haya ejecutado correctamente, editaremos el archivo **cargar_digitalizacion_NombreAgencia.bat**, se cambian los datos de conexión de la base de datos y guardamos los cambios.
 
-    > [!IMPORTANT]  
-    > Sustituir la palabra **NombreAgencia** por el nombre **real** de la agencia en **minúscula**.
+> [!IMPORTANT]  
+> Sustituir la palabra **NombreAgencia** por el nombre **real** de la agencia en **minúscula**.
 
 7. Con el archivo **cargar_digitalizacion_NombreAgencia.bat** se creará una tarea de Windows la cual se ejecutará cada 30 minutos de 7am a 7pm. Esta tarea debe tener el nombre de **CargaDigitalizacionNombreAgencia**.
 
-    > [!NOTE]  
-    > Los archivos que terminan con el sufijo **_historica**, solo se ejecutan si se requiere nuevamente una carga historica en el distribuidor.
+> [!NOTE]  
+> Los archivos que terminan con el sufijo **_historica**, solo se ejecutan si se requiere nuevamente una carga historica en el distribuidor.
