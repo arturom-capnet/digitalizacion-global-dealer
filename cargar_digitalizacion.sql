@@ -12,87 +12,87 @@ CREATE OR ALTER PROCEDURE [dbo].[cargar_digitalizacion] --EXEC cargar_digitaliza
 AS
 
 ----- TABLEROS -----
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.tb_citas_dealer WHERE fecha >= GETDATE()-3
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.tb_citas_dealer
-SELECT * FROM tb_citas WHERE fecha >= GETDATE()-3
+DELETE FROM [CAPNET].destino_database.dbo.tb_citas_dealer WHERE fecha >= GETDATE()-2
+INSERT INTO [CAPNET].destino_database.dbo.tb_citas_dealer
+SELECT * FROM tb_citas WHERE fecha >= GETDATE()-2
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.tb_citas_header_nw_dealer WHERE fecha >= GETDATE()-3
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.tb_citas_header_nw_dealer
-SELECT * FROM tb_citas_header_nw WHERE fecha >= GETDATE()-3
---SELECT *, '' AS aseguradora FROM tb_citas_header_nw WHERE fecha >= GETDATE()-3
+DELETE FROM [CAPNET].destino_database.dbo.tb_citas_header_nw_dealer WHERE fecha >= GETDATE()-2
+INSERT INTO [CAPNET].destino_database.dbo.tb_citas_header_nw_dealer
+SELECT * FROM tb_citas_header_nw WHERE fecha >= GETDATE()-2
+--SELECT *, '' AS aseguradora FROM tb_citas_header_nw WHERE fecha >= GETDATE()-2
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.tb_citas_detenidos_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.tb_citas_detenidos_dealer
+DELETE FROM [CAPNET].destino_database.dbo.tb_citas_detenidos_dealer
+INSERT INTO [CAPNET].destino_database.dbo.tb_citas_detenidos_dealer
 SELECT * FROM tb_citas_detenidos
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.tb_tecnicos_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.tb_tecnicos_dealer
+DELETE FROM [CAPNET].destino_database.dbo.tb_tecnicos_dealer
+INSERT INTO [CAPNET].destino_database.dbo.tb_tecnicos_dealer
 SELECT * FROM tb_tecnicos
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.tb_asesores_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.tb_asesores_dealer
+DELETE FROM [CAPNET].destino_database.dbo.tb_asesores_dealer
+INSERT INTO [CAPNET].destino_database.dbo.tb_asesores_dealer
 SELECT * FROM sccusuarios
 --SELECT *, '' AS activo FROM sccusuarios
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.tb_ausencias_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.tb_ausencias_dealer
+DELETE FROM [CAPNET].destino_database.dbo.tb_ausencias_dealer
+INSERT INTO [CAPNET].destino_database.dbo.tb_ausencias_dealer
 SELECT * FROM tb_ausencias
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.tb_ausencias_asesores_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.tb_ausencias_asesores_dealer
+DELETE FROM [CAPNET].destino_database.dbo.tb_ausencias_asesores_dealer
+INSERT INTO [CAPNET].destino_database.dbo.tb_ausencias_asesores_dealer
 SELECT * FROM tb_ausencias
 
 
 ----- KPIS -----
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.fv_calidad_kpi_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.fv_calidad_kpi_dealer
+DELETE FROM [CAPNET].destino_database.dbo.fv_calidad_kpi_dealer
+INSERT INTO [CAPNET].destino_database.dbo.fv_calidad_kpi_dealer
 SELECT * FROM fv_calidad_kpi
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.fv_kpi_promedio_tiempos_express_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.fv_kpi_promedio_tiempos_express_dealer
+DELETE FROM [CAPNET].destino_database.dbo.fv_kpi_promedio_tiempos_express_dealer
+INSERT INTO [CAPNET].destino_database.dbo.fv_kpi_promedio_tiempos_express_dealer
 SELECT * FROM fv_kpi_promedio_tiempos_express
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.fv_lavado_kpi_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.fv_lavado_kpi_dealer
+DELETE FROM [CAPNET].destino_database.dbo.fv_lavado_kpi_dealer
+INSERT INTO [CAPNET].destino_database.dbo.fv_lavado_kpi_dealer
 SELECT * FROM fv_lavado_kpi
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.fv_productividad_total_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.fv_productividad_total_dealer
+DELETE FROM [CAPNET].destino_database.dbo.fv_productividad_total_dealer
+INSERT INTO [CAPNET].destino_database.dbo.fv_productividad_total_dealer
 SELECT * FROM fv_productividad_total
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.v_citas_show_noshow_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.v_citas_show_noshow_dealer
+DELETE FROM [CAPNET].destino_database.dbo.v_citas_show_noshow_dealer
+INSERT INTO [CAPNET].destino_database.dbo.v_citas_show_noshow_dealer
 SELECT * FROM v_citas_show_noshow
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.v_dif_entrega_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.v_dif_entrega_dealer
+DELETE FROM [CAPNET].destino_database.dbo.v_dif_entrega_dealer
+INSERT INTO [CAPNET].destino_database.dbo.v_dif_entrega_dealer
 SELECT * FROM v_dif_entrega
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.v_hit_bateo_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.v_hit_bateo_dealer
+DELETE FROM [CAPNET].destino_database.dbo.v_hit_bateo_dealer
+INSERT INTO [CAPNET].destino_database.dbo.v_hit_bateo_dealer
 SELECT * FROM v_hit_bateo
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.v_pull_sys_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.v_pull_sys_dealer
+DELETE FROM [CAPNET].destino_database.dbo.v_pull_sys_dealer
+INSERT INTO [CAPNET].destino_database.dbo.v_pull_sys_dealer
 SELECT * FROM v_pull_sys
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.v_pull_sys_detalle_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.v_pull_sys_detalle_dealer
+DELETE FROM [CAPNET].destino_database.dbo.v_pull_sys_detalle_dealer
+INSERT INTO [CAPNET].destino_database.dbo.v_pull_sys_detalle_dealer
 SELECT * FROM v_pull_sys_detalle
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.v_pull_sys_ws_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.v_pull_sys_ws_dealer
+DELETE FROM [CAPNET].destino_database.dbo.v_pull_sys_ws_dealer
+INSERT INTO [CAPNET].destino_database.dbo.v_pull_sys_ws_dealer
 SELECT * FROM v_pull_sys_ws
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.V_TIEMPO_OPERACION_REAL_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.V_TIEMPO_OPERACION_REAL_dealer
+DELETE FROM [CAPNET].destino_database.dbo.V_TIEMPO_OPERACION_REAL_dealer
+INSERT INTO [CAPNET].destino_database.dbo.V_TIEMPO_OPERACION_REAL_dealer
 SELECT * FROM V_TIEMPO_OPERACION_REAL
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.V_TIEMPO_OPERACION_REAL_TECNICO_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.V_TIEMPO_OPERACION_REAL_TECNICO_dealer
+DELETE FROM [CAPNET].destino_database.dbo.V_TIEMPO_OPERACION_REAL_TECNICO_dealer
+INSERT INTO [CAPNET].destino_database.dbo.V_TIEMPO_OPERACION_REAL_TECNICO_dealer
 SELECT * FROM V_TIEMPO_OPERACION_REAL_TECNICO
 
-DELETE FROM [CAPNET].capnet_digitalizacion_hyd_test.dbo.v_uso_tableros_asesor_anfitrion_dealer
-INSERT INTO [CAPNET].capnet_digitalizacion_hyd_test.dbo.v_uso_tableros_asesor_anfitrion_dealer
+DELETE FROM [CAPNET].destino_database.dbo.v_uso_tableros_asesor_anfitrion_dealer
+INSERT INTO [CAPNET].destino_database.dbo.v_uso_tableros_asesor_anfitrion_dealer
 SELECT * FROM v_uso_tableros_asesor_anfitrion
 GO
