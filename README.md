@@ -12,12 +12,13 @@
 
 5. Repetir los pasos 1, 2, 3, y 4, pero con el archivo **cargar_digitalizacion.sql**.
 
-6. Una vez que todo se haya ejecutado correctamente, editaremos el archivo **cargar_digitalizacion_NombreAgencia.bat**, se cambian los datos de conexión de la base de datos y guardamos los cambios.
+6. Una vez que todo se haya ejecutado correctamente, editaremos el archivo **cargar_digitalizacion_marca_NombreAgencia.bat**, se cambian los datos de conexión de la base de datos y guardamos los cambios.
 
 > [!IMPORTANT]  
-> Sustituir la palabra **NombreAgencia** por el nombre **real** de la agencia en **minúscula**.
+> Sustituir la palabra **marca** por la marca de autos que corresponda a la agencia en **minúscula** (ej. hyundai, mazda, toyota).  
+> Sustituir la palabra **NombreAgencia** por el nombre **real** de la agencia en **minúscula** (ej. pedregal, campestre,cumbres).
 
-7. Con el archivo **cargar_digitalizacion_NombreAgencia.bat** se creará una tarea de Windows la cual se ejecutará cada 30 minutos de 7am a 7pm. Esta tarea debe tener el nombre de **CargaDigitalizacionNombreAgencia**.
+7. Con el archivo **cargar_digitalizacion_marca_NombreAgencia.bat** se creará una tarea de Windows la cual se ejecutará cada 30 minutos de 7am a 7pm. Esta tarea debe tener el nombre de **CargaDigitalizacionMarcaNombreAgencia**.
 
 > [!IMPORTANT]  
 > En caso de usar **SQLAgent**, se solicita estrictamente crear el/los Job(s) con las mismas caracteríasticas que la/las tarea(s) programada(s) de Windows.
