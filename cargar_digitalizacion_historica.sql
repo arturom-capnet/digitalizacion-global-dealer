@@ -40,7 +40,7 @@ SELECT * FROM tb_ausencias
 
 DELETE FROM [CAPNET].destino_database.dbo.tb_ausencias_asesores_dealer
 INSERT INTO [CAPNET].destino_database.dbo.tb_ausencias_asesores_dealer
-SELECT * FROM tb_ausencias
+SELECT * FROM tb_ausencias_asesores
 
 
 ----- KPIS -----
