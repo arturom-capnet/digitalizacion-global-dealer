@@ -38,7 +38,7 @@
 
 10. Con el archivo **cargar_digitalizacion_tablero_marca_NombreAgencia.bat** se creará una tarea de Windows la cual se ejecutará cada 30 minutos de 7am a 7pm. Esta tarea debe tener el nombre de **CargaDigitalizacionTableroMarcaNombreAgencia**.
 
-11. Con el archivo **cargar_digitalizacion_kpis_marca_NombreAgencia.bat** se creará una tarea de Windows la cual se ejecutará cada 4 horas de 7am a 7pm. Esta tarea debe tener el nombre de **CargaDigitalizacionKpisMarcaNombreAgencia**.
+11. Con el archivo **cargar_digitalizacion_kpis_marca.bat** se creará una tarea de Windows la cual se ejecutará cada 4 horas de 7am a 7pm. Esta tarea debe tener el nombre de **CargaDigitalizacionKpisMarca** y debe contener la carga de kpis de todas las agencias que estén en el servidor.
 
 > [!IMPORTANT]  
 > En caso de usar **SQLAgent**, se solicita estrictamente crear el/los Job(s) con las mismas caracteríasticas que la/las tarea(s) programada(s) de Windows.
