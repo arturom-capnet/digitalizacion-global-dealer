@@ -60,7 +60,7 @@ SELECT
     END CON_CITA,
     fecha_Hora_ini_Oper,
     Fecha_Hora_Fin_Oper,
-    CONVERT(  float, ISNULL(Tmp_original, cast(SERVICIO as float))) / 60.00 TIEMPO_ASIGNADO,
+    CONVERT(  float, ISNULL(replace(Tmp_original,0,NULL), cast(SERVICIO as float))) / 60.00 TIEMPO_ASIGNADO,
 	cast(case
 		-- No reiniciado | Reiniciado y no finalizado
 		when (fecha_hora_paro is not null and fecha_hora_reinicio is null) or
@@ -116,9 +116,9 @@ SELECT
 		THEN 'A Tiempo'
 		ELSE 'Tardia'
     END Status_Inicio,
-    cast(Servicio as float) - cast(Tmp_original as float) TMP_DIFF_FIN,
-    cast(SERVICIO as float) / Tmp_original DIFF_FIN_por,
-    cast(Tmp_original as float) Tmp_original,
+    cast(Servicio as float) - cast(replace(Tmp_original,0,NULL) as float) TMP_DIFF_FIN,
+    cast(SERVICIO as float) / replace(Tmp_original,0,NULL) DIFF_FIN_por,
+    cast(replace(Tmp_original,0,NULL) as float) Tmp_original,
     cast(SERVICIO as float) servicio,
     horaRampa,
     CASE
@@ -128,9 +128,9 @@ SELECT
 		CASE
             WHEN Fecha_Hora_Fin_Oper IS NULL AND Fecha_Hora_Paro IS NULL THEN 
 			'No Finalizada'
-            WHEN cast(servicio as float) / Tmp_original < .90 THEN 
+            WHEN cast(servicio as float) / replace(Tmp_original,0,NULL) < .90 THEN 
 			'Anticipada'
-            WHEN cast(servicio as float) / Tmp_original > 1.10 THEN 
+            WHEN cast(servicio as float) / replace(Tmp_original,0,NULL) > 1.10 THEN 
 			'Tardia'
             ELSE 
 			'En Tiempo'
