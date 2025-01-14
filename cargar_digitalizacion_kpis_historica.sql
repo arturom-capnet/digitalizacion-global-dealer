@@ -63,4 +63,8 @@ SELECT * FROM V_TIEMPO_OPERACION_REAL_TECNICO
 DELETE FROM [CAPNET].destino_database.dbo.v_uso_tableros_asesor_anfitrion_dealer
 INSERT INTO [CAPNET].destino_database.dbo.v_uso_tableros_asesor_anfitrion_dealer
 SELECT * FROM v_uso_tableros_asesor_anfitrion
+
+DELETE FROM [CAPNET].destino_database.dbo.fv_reporte_uso_global_dealer
+INSERT INTO [CAPNET].destino_database.dbo.fv_reporte_uso_global_dealer
+SELECT * FROM fv_reporte_uso_global
 GO
