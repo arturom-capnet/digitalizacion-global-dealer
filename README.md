@@ -33,8 +33,8 @@
 9. Repetir el paso 8 con el archivo **cargar_digitalizacion_kpis_marca_NombreAgencia.bat**.
 
 > [!IMPORTANT]  
-> Sustituir la palabra **marca** por la marca de autos que corresponda a la agencia en **minúscula** (ej. hyundai, mazda, toyota).  
-> Sustituir la palabra **NombreAgencia** por el nombre **real** de la agencia en **minúscula** (ej. pedregal, campestre,cumbres).
+> Sustituir la palabra **marca** por la marca de autos que corresponda a la agencia en **minúscula** (ej. hyundai, mazda, toyota). 
+> Sustituir la palabra **NombreAgencia** por el nombre **real** de la agencia en **minúscula** (ej. pedregal, campestre, cumbres).
 
 10. Con el archivo **cargar_digitalizacion_tablero_marca_NombreAgencia.bat** se creará una tarea de Windows la cual se ejecutará cada 30 minutos de 7am a 7pm. Esta tarea debe tener el nombre de **CargaDigitalizacionTableroMarcaNombreAgencia**.
 
