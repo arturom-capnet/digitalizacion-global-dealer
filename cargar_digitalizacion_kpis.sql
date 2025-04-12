@@ -8,7 +8,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER PROCEDURE [dbo].[cargar_digitalizacion_kpis] --EXEC cargar_digitalizacion_kpis
+CREATE OR ALTER PROCEDURE [dbo].[cargar_digitalizacion_kpis] -- EXEC cargar_digitalizacion_kpis
 AS
 
 ----- KPIS -----

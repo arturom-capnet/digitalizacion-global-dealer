@@ -8,7 +8,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER PROCEDURE [dbo].[cargar_digitalizacion_tablero] --EXEC cargar_digitalizacion_tablero
+CREATE OR ALTER PROCEDURE [dbo].[cargar_digitalizacion_tablero] -- EXEC cargar_digitalizacion_tablero
 AS
 
 ----- TABLEROS -----
